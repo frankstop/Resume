@@ -1,8 +1,6 @@
 # Frank Valdez Resume
 
-This repo publishes a PNG preview of my current resume on GitHub Pages, with PDF download and LaTeX source links close by. Serious document, suspicious amount of machinery.
-
-![Resume](FrankValdezResumeJune_IconSpaced_preview.png)
+This repo publishes a PNG preview of my current resume on GitHub Pages, with PDF download and LaTeX source links close by.
 
 ## Badge Central
 
@@ -49,3 +47,4 @@ Current signal: software developer with hands-on IT operations background. Not a
 
 [Open PDF](FrankValdezResumeJune_IconSpaced.pdf)  
 [Read LaTeX source](FrankValdezResumeJune_IconSpaced.tex)
+![Resume](FrankValdezResumeJune_IconSpaced_preview.png)
