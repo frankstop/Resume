@@ -1,190 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frank Valdez Resume</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frank Valdez Resume</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1f2933;
+      --muted: #5b6472;
+      --line: #d8dee8;
+      --paper: #ffffff;
+      --back: #eef2f7;
+      --accent: #2457a6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--back);
+    }
+
+    main {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0 32px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 4px;
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    a.button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--ink);
+      background: var(--paper);
+      text-decoration: none;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    a.button.primary {
+      border-color: var(--accent);
+      color: #ffffff;
+      background: var(--accent);
+    }
+
+    .viewer {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      padding: 16px;
+    }
+
+    .viewer a {
+      display: block;
+      width: 100%;
+      text-decoration: none;
+    }
+
+    .viewer img {
+      display: block;
+      width: min(100%, 900px);
+      height: auto;
+      margin: 0 auto;
+      border: 1px solid var(--line);
+      background: #ffffff;
+    }
+
+    @media (max-width: 720px) {
+      main {
+        width: min(100% - 20px, 1120px);
+        padding-top: 14px;
+      }
+
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: flex-start;
+        width: 100%;
+      }
+
+      a.button {
+        flex: 1 1 auto;
+        justify-content: center;
+      }
+
+      .viewer {
+        padding: 8px;
+      }
+    }
+  </style>
 </head>
-<body class="bg-gray-100 p-4 sm:p-6 lg:p-8">
-    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8 sm:p-12">
-        <!-- Header Section -->
-        <header class="text-center mb-8">
-            <h1 class="text-4xl sm:text-5xl font-bold text-gray-800 tracking-wider">FRANK VALDEZ</h1>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-x-6 gap-y-2 mt-4 text-gray-600">
-                <a href="mailto:frankiejvaldez@outlook.com" class="flex items-center gap-2 hover:text-blue-600 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-                    </svg>
-                    frankiejvaldez@outlook.com
-                </a>
-                <span class="hidden sm:inline text-gray-300">|</span>
-                <div class="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
-                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
-                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                    </svg>
-                    NYC, New York
-                </div>
-                <span class="hidden sm:inline text-gray-300">|</span>
-                <a href="https://github.com/frankstop" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-blue-600 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                    </svg>
-                    github.com/frankstop
-                </a>
-            </div>
-        </header>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Frank Valdez Resume</h1>
+        <p>Current PDF resume with LaTeX source included.</p>
+      </div>
+      <nav aria-label="Resume files">
+        <a class="button primary" href="FrankValdezResumeJune_IconSpaced.pdf" download>Download PDF</a>
+        <a class="button" href="FrankValdezResumeJune_IconSpaced.tex">View TeX</a>
+      </nav>
+    </header>
 
-        <!-- Dynamic Section Function -->
-        <script>
-            function createSection(title, content) {
-                const section = document.createElement('section');
-                section.className = 'mb-8';
-                section.innerHTML = `
-                    <h2 class="text-xl font-bold text-gray-700 border-b-2 border-gray-200 pb-2 mb-4 tracking-wide uppercase">${title}</h2>
-                    ${content}
-                `;
-                document.getElementById('resume-content').appendChild(section);
-            }
-        </script>
-
-        <main id="resume-content">
-            <!-- Sections will be injected here by JavaScript -->
-        </main>
-
-        <script>
-            // Data for the resume
-            const resumeData = {
-                summary: `IT professional with 6+ years of experience in operations analysis, infrastructure engineering, and technical support. Skilled in identity management, systems troubleshooting, and automation. Proven record of delivering large-scale migrations, improving uptime, and streamlining onboarding processes.`,
-                skills: [
-                    'Azure AD / Active Directory', 'Okta Identity Management', 'PowerShell / Automation',
-                    'LAN/WAN/VoIP Troubleshooting', 'Device Imaging & Deployment', 'SaaS / CRM / ERP Support',
-                    'Bilingual, Spanish'
-                ],
-                certifications: [
-                    'Google IT Support Professional Certificate',
-                    'Google UX Design Professional Certificate'
-                ],
-                experience: [
-                    {
-                        title: 'IT Operations Analyst (Contract)',
-                        company: 'Wells Fargo',
-                        location: 'West Des Moines, IA',
-                        dates: 'Jun 2023 – Jul 2023',
-                        points: [
-                            'Imaged 200+ devices end-to-end daily, ensuring 100% compliance with security baselines.',
-                            'Reduced turnaround time by 20% through streamlined QA checks during deployment.'
-                        ]
-                    },
-                    {
-                        title: 'Technical Support (Contract)',
-                        company: 'Life Care Services',
-                        location: 'West Des Moines, IA',
-                        dates: 'Dec 2022 – Mar 2023',
-                        points: [
-                            'Migrated 22,000 employees to Okta within 4 months, improving system-wide authentication reliability.',
-                            'Handled 50+ daily support calls, resolving 85% at first contact.'
-                        ]
-                    },
-                    {
-                        title: 'Infrastructure Engineer (Contract)',
-                        company: 'John Deere',
-                        location: 'Des Moines, IA',
-                        dates: 'Jun 2022 – Dec 2022',
-                        points: [
-                            'Delivered 2nd and 3rd tier support for 5,000+ internal and external users.',
-                            'Resolved LAN, WAN, and VoIP issues, cutting recurring outages by 15%.',
-                            'Defined project scope and timelines for infrastructure upgrades impacting 1,200 endpoints.'
-                        ]
-                    },
-                    {
-                        title: 'Help Desk Support Specialist',
-                        company: 'Wright Service Corp',
-                        location: 'Des Moines, IA',
-                        dates: 'May 2021 – Jun 2022',
-                        points: [
-                            'Configured and secured 400+ employee workstations with consistent imaging standards.',
-                            'Automated onboarding processes, reducing new hire setup time by 30%.',
-                            'Maintained endpoint software and enforced security patches, ensuring compliance with company policy.'
-                        ]
-                    },
-                    {
-                        title: 'Account Manager',
-                        company: 'Edge Realty Group',
-                        location: 'Garden City, NY',
-                        dates: 'May 2018 – Jan 2021',
-                        points: [
-                            'Managed client relationships generating repeat business across 30+ accounts.',
-                            'Deployed and maintained remote desktop systems for staff, cutting downtime.',
-                            'Managed internal file server and enforced IT best practices.'
-                        ]
-                    },
-                    {
-                        title: 'Administrative Assistant',
-                        company: 'Edge Realty Group',
-                        location: 'Garden City, NY',
-                        dates: 'Jan 2014 – May 2018',
-                        points: [
-                            'Streamlined office processes to improve broker productivity.',
-                            'Provided IT support for daily technical issues, reducing the need for third-party service costs.'
-                        ]
-                    },
-                ],
-                education: [
-                    {
-                        degree: 'Bachelor of Science, Computer & Information Science',
-                        school: 'SUNY Old Westbury',
-                        date: 'August 2025'
-                    },
-                    {
-                        degree: 'Associate of Science',
-                        school: 'Nassau Community College',
-                        date: 'May 2017'
-                    }
-                ]
-            };
-
-            // Build Sections
-            createSection('Professional Summary', `<p class="text-gray-700 leading-relaxed">${resumeData.summary}</p>`);
-
-            const skillsContent = `<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-2 text-gray-700">${resumeData.skills.map(skill => `<div class="flex items-center"><span class="text-blue-500 mr-2">◆</span>${skill}</div>`).join('')}</div>`;
-            createSection('Core Skills', skillsContent);
-
-            const certsContent = `<ul class="space-y-2">${resumeData.certifications.map(cert => `<li class="text-gray-700">${cert}</li>`).join('')}</ul>`;
-            createSection('Certifications', certsContent);
-
-            const expContent = resumeData.experience.map(job => `
-                <div class="mb-6">
-                    <div class="flex flex-col sm:flex-row justify-between mb-1">
-                        <h3 class="text-lg font-semibold text-gray-800">${job.title} – <span class="font-medium">${job.company}</span></h3>
-                        <p class="text-sm text-gray-500 italic sm:text-right">${job.location} | ${job.dates}</p>
-                    </div>
-                    <ul class="list-disc pl-6 space-y-1 text-gray-700">
-                        ${job.points.map(point => `<li>${point}</li>`).join('')}
-                    </ul>
-                </div>
-            `).join('');
-            createSection('Professional Experience', expContent);
-
-            const eduContent = resumeData.education.map(edu => `
-                <div class="mb-2">
-                    <div class="flex flex-col sm:flex-row justify-between">
-                         <h3 class="text-lg font-semibold text-gray-800">${edu.degree}</h3>
-                         <p class="text-sm text-gray-500 italic sm:text-right">${edu.school}, ${edu.date}</p>
-                    </div>
-                </div>
-            `).join('');
-            createSection('Education', eduContent);
-        </script>
-    </div>
+    <section class="viewer" aria-label="Resume preview">
+      <a href="FrankValdezResumeJune_IconSpaced.pdf" aria-label="Open resume PDF">
+        <img src="FrankValdezResumeJune_IconSpaced_preview.png" alt="Frank Valdez resume preview">
+      </a>
+    </section>
+  </main>
 </body>
 </html>

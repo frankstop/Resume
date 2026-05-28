@@ -1,0 +1,103 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.55in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=*, itemsep=2.1pt, topsep=2.1pt, parsep=0pt, partopsep=0pt}
+\titleformat{\section}{\normalsize\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{7.4pt}{3.8pt}
+\renewcommand{\arraystretch}{1.09}
+
+\newcommand{\resumeRole}[4]{
+  \textbf{#1} \hfill #2\\
+  \textit{#3} \hfill #4
+}
+
+\newcommand{\resumeCompactRole}[3]{
+  \textbf{#1} \hfill #2\\
+  \textit{#3}
+}
+
+\begin{document}
+\fontsize{9.25}{11.05}\selectfont
+
+\begin{center}
+  {\Large \textbf{Frank Valdez}}\\[1.5pt]
+  \faMapMarker*~Amityville, NY \quad | \quad \faPhone*~(516) 448-5064 \quad | \quad \faEnvelope~\href{mailto:frankiejvaldez@gmail.com}{frankiejvaldez@gmail.com}\\[1pt]
+  \faLinkedin~\href{https://linkedin.com/in/frankiejvaldez}{linkedin.com/in/frankiejvaldez} \quad | \quad \faGithub~\href{https://github.com/frankstop}{github.com/frankstop}
+\end{center}
+
+\section*{Summary}
+Software developer with recent production IT ownership and shipped projects in automation, data pipelines, public dashboards, and developer tooling. Strong in Python, TypeScript, SQL, REST APIs, GitHub Actions, and browser-based delivery; able to debug legacy operations, model messy data, and turn repeat work into maintained tools.
+
+\section*{Technical Skills}
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}p{1.15in} >{\raggedright\arraybackslash}X@{}}
+Languages & Python, TypeScript, JavaScript, C\#, SQL, Java, C++, Bash, PowerShell\\
+Backend & FastAPI, Pydantic, SQLAlchemy, REST APIs, service integrations, API-backed applications\\
+Frontend & React, Vite, Next.js, HTML, CSS, responsive UI, browser automation, WordPress automation\\
+Data/DB & SQL Server, SSMS, SQLite, PostgreSQL, pandas, NumPy, scikit-learn, XGBoost, Jupyter\\
+Automation & GitHub Actions CI/CD, GitHub CLI, shell scripting, Playwright, scraping, scheduled pipelines\\
+\end{tabularx}
+
+\section*{Experience}
+\resumeRole{Gala Fresh Farms Supermarkets}{New York, NY}{IT Operations Manager}{Nov. 2025 -- Present}
+\begin{itemize}
+  \item Own daily SQL/SSMS workflows for a 70,000-record operational database, using joins, validation queries, update scripts, and data transformations to keep store data usable.
+  \item Built dashboards and WordPress automation for batch deletion monitoring, weekly circular publishing, and local-to-live deployment workflows.
+  \item Support legacy LOC SMS POS and back-office systems across 2 store locations, resolving database, workflow, payment, and user-reported production issues.
+  \item Validate POS/payment behavior for WIC, EBT, credit card, and related tender workflows against store operations and data integrity requirements.
+  \item Reconciled 14,000 active SKUs before batch deletion and added safeguards to avoid removing new or scalable inventory records.
+\end{itemize}
+
+\resumeRole{Wells Fargo (Contract)}{Des Moines, IA}{IT Operations Analyst}{Jun. 2023 -- Jul. 2023}
+\begin{itemize}
+  \item Validated provisioning workflows for 600 weekly shipments, enforcing 48-hour SLA and zero-defect delivery standards.
+\end{itemize}
+
+\resumeRole{LCS (Contract)}{Des Moines, IA}{Desktop Support Specialist}{Dec. 2022 -- Mar. 2023}
+\begin{itemize}
+  \item Supported migration of 22,000 employee profiles into Okta and resolved 70 daily support requests across access, login, and escalation workflows.
+\end{itemize}
+
+\resumeRole{John Deere (Contract)}{Des Moines, IA}{Traveling Infrastructure Engineer}{Jun. 2022 -- Dec. 2022}
+\begin{itemize}
+  \item Served as frontline infrastructure contact across 3 enterprise environments, documenting issues and coordinating fixes with senior engineers.
+\end{itemize}
+
+\resumeCompactRole{Earlier IT Support}{2014 -- 2022}{Help Desk, Account Management \& IT Support}
+Wright Service Corp help desk support; Edge Realty Group account management and IT support across remote desktop, file server, onboarding, and business-user workflows.
+
+\section*{Projects}
+\textbf{f-ast} \hfill \href{https://github.com/frankstop/f-ast}{github.com/frankstop/f-ast}
+\begin{itemize}
+  \item Built a TypeScript parser toolkit that converts legacy Java 6--8 and C\# 5--7 codebases into compact structure, symbol, flow, and diagnostic output for AI-assisted code analysis.
+\end{itemize}
+
+\textbf{Civil Service Watch} \hfill \href{https://github.com/frankstop/civil-service-watch}{github.com/frankstop/civil-service-watch}
+\begin{itemize}
+  \item Built a scheduled Python monitor for public-sector exam and hiring pages, with change detection, source-health reporting, GitHub Actions refreshes, and a GitHub Pages dashboard.
+\end{itemize}
+
+\textbf{KingKullenResearch} \hfill \href{https://github.com/frankstop/KingKullenResearch}{github.com/frankstop/KingKullenResearch}
+\begin{itemize}
+  \item Built a weekly grocery-pricing pipeline from Freshop API data, adding longitudinal price tracking, reconciliation checks, predictive modeling, and GitHub Pages reporting.
+\end{itemize}
+
+\section*{Education}
+\textbf{SUNY Old Westbury} \hfill Jan. 2024 -- Aug. 2025\\
+B.S. Computer \& Information Sciences, GPA 3.85; Dean's List; Coding Club Re-Founder; Othello AI FastAPI capstone\\
+\textbf{Nassau Community College} \hfill 2015 -- 2017\\
+Associate of Science (A.S.)\\
+\textbf{Certifications:} Google UX Design Certificate; Google IT Support Certificate
+
+\end{document}
