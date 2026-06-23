@@ -44,6 +44,6 @@ I build tools that make messy work less cursed: SQL checks, data cleanup, GitHub
 Current signal goal: software developer with hands-on IT operations background.
 ## Resume Links
 
-[Open PDF](FrankValdezResumeJune_IconSpaced.pdf)  
-[Read LaTeX source](FrankValdezResumeJune_IconSpaced.tex)
-![Resume](FrankValdezResumeJune_IconSpaced_preview.png)
+[Open PDF](Frank_Valdez_Resume.pdf)  
+[Read LaTeX source](Frank_Valdez_Resume.tex)
+![Resume](Frank_Valdez_Resume_preview.png)
