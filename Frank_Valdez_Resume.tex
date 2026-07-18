@@ -13,89 +13,92 @@
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\setlist[itemize]{leftmargin=*, itemsep=2.1pt, topsep=2.1pt, parsep=0pt, partopsep=0pt}
-\titleformat{\section}{\normalsize\bfseries}{}{0pt}{}[\titlerule]
-\titlespacing*{\section}{0pt}{7.4pt}{3.8pt}
-\renewcommand{\arraystretch}{1.09}
+\setlist[itemize]{leftmargin=*, itemsep=2.35pt, topsep=2.4pt, parsep=0pt, partopsep=0pt}
+\titleformat{\section}{\fontsize{10.4}{12.2}\selectfont\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{8.2pt}{4.2pt}
+\renewcommand{\arraystretch}{1.12}
+
+\newcommand{\resumeTitle}[1]{{\fontsize{9.65}{11.35}\selectfont\textbf{#1}}}
+\newcommand{\resumeSubTitle}[1]{{\fontsize{9.45}{11.15}\selectfont\textit{#1}}}
 
 \newcommand{\resumeRole}[4]{
-  \textbf{#1} \hfill \textbf{#2}\\
-  \textit{#3} \hfill \textbf{#4}
+  \resumeTitle{#1} \hfill \resumeTitle{#2}\\
+  \resumeSubTitle{#3} \hfill \resumeTitle{#4}
 }
 
 \newcommand{\resumeCompactRole}[3]{
-  \textbf{#1} \hfill \textbf{#2}\\
-  \textit{#3}
+  \resumeTitle{#1} \hfill \resumeTitle{#2}\\
+  \resumeSubTitle{#3}
 }
 
 \begin{document}
 \fontsize{9.25}{11.05}\selectfont
 
 \begin{center}
-  {\fontsize{24}{26}\selectfont \textbf{Frank Valdez}}\\[1.5pt]
-  \faMapMarker*~\textbf{Amityville, NY} \quad | \quad \faPhone*~(516) 448-5064 \quad | \quad \faEnvelope~\href{mailto:frankiejvaldez@gmail.com}{\textbf{frankiejvaldez@gmail.com}}\\[1pt]
-  \faLinkedin~\href{https://linkedin.com/in/frankiejvaldez}{\textbf{linkedin.com/in/frankiejvaldez}} \quad | \quad \faGithub~\href{https://github.com/frankstop}{\textbf{github.com/frankstop}}
+  {\fontsize{24}{26}\selectfont \textbf{Frank Valdez}}\\[2pt]
+  \faMapMarker*~\textbf{Amityville, NY} \quad | \quad \faPhone*~(516) 448-5064 \quad | \quad \faEnvelope~\href{mailto:frankiejvaldez@gmail.com}{\textbf{frankiejvaldez@gmail.com}}\\[1.5pt]
+  \faLinkedin~\href{https://linkedin.com/in/frankiejvaldez}{\textbf{linkedin.com/in/frankiejvaldez}} \quad | \quad \faGithub~\href{https://github.com/frankstop}{\textbf{github.com/frankstop}} \quad | \quad \faGlobe~\href{https://frankiejvaldez.com}{\textbf{frankiejvaldez.com}}
 \end{center}
 
 \section*{Summary}
-Software and data candidate with a B.S. in Computer \& Information Sciences and hands-on work across production support, automation, SQL workflows, dashboards, APIs, and user-facing systems. Strong in Python, TypeScript, SQL, GitHub Actions, REST APIs, debugging, documentation, and turning operational problems into working tools. Brings practical production-support habits through written documentation, issue tracking, remote collaboration, user support, and a telework-ready home setup.
+Software and data professional with a B.S. in Computer \& Information Science and experience building dashboards, automated data pipelines, WordPress plugins, and internal tools for retail operations. Develops independent grocery-pricing systems whose outputs support competitive analysis, website-price monitoring, and operational decision-making. Strong in Python, SQL, JavaScript/TypeScript, GitHub Actions, APIs, automation, and production support.
 
 \section*{Technical Skills}
-\begin{tabularx}{\textwidth}{@{}>{\bfseries}p{1.15in} >{\raggedright\arraybackslash}X@{}}
-Languages & Python, TypeScript, JavaScript, SQL, C\#, Java, C++, Bash, PowerShell\\
-Backend & FastAPI, Pydantic, SQLAlchemy, REST APIs, service integrations, OpenAPI client tooling\\
-Frontend & React, Vite, Next.js, HTML, CSS, GitHub Pages, WordPress automation\\
-Data/DB & SQL Server, SSMS, SQLite, PostgreSQL, pandas, NumPy, scikit-learn, reconciliation checks\\
-Automation & GitHub Actions CI/CD, GitHub CLI, shell scripting, Playwright, scheduled pipelines\\
+\begin{tabularx}{\textwidth}{@{}p{1.15in} >{\raggedright\arraybackslash}X@{}}
+\resumeTitle{Languages} & Python, SQL, JavaScript, TypeScript, Bash, PowerShell\\
+\resumeTitle{Data/DB} & SQL Server, SSMS, PostgreSQL, SQLite, pandas, NumPy, JSON/JSONL, time-series analysis\\
+\resumeTitle{Pipelines} & GitHub Actions CI/CD, Playwright, REST APIs, scheduled workflows, validation, reconciliation\\
+\resumeTitle{Web/Tools} & WordPress plugin development, dashboards, React, HTML, CSS, GitHub Pages\\
+\resumeTitle{Additional} & FastAPI, Pydantic, SQLAlchemy, service integrations, scikit-learn\\
 \end{tabularx}
 
 \section*{Experience}
 \resumeRole{Gala Fresh Farms Supermarkets}{New York, NY}{IT Operations Manager}{Nov. 2025 -- Present}
 \begin{itemize}
   \item Support legacy LOC SMS POS and back-office systems across 2 store locations, resolving database, workflow, payment, and user-reported production issues.
-  \item Build dashboards and WordPress automation for batch monitoring, weekly circular publishing, and local-to-live store workflows.
-  \item Translate ambiguous operational issues into documented fixes, validation checks, and user-facing guidance that keeps store work moving.
+  \item Build dashboards, automations, and WordPress plugins for batch monitoring, weekly circular publishing, and local-to-live website workflows.
+  \item Feed independent grocery-pricing data into internal competitive tools, comparing company website and competitor online catalog prices while keeping them distinct from shelf and POS pricing.
 \end{itemize}
 
-\resumeRole{Wells Fargo (Contract)}{Des Moines, IA}{IT Operations Analyst}{Jun. 2023 -- Jul. 2023}
+\resumeRole{Contract Work}{Des Moines, IA}{IT Operations Analyst; Desktop Support Specialist; Traveling Infrastructure Engineer}{Jun. 2022 -- Jul. 2023}
 \begin{itemize}
-  \item Validated provisioning workflows for 600 weekly shipments against 48-hour SLA and zero-defect standards.
+  \item For Wells Fargo, validated provisioning workflows for 600 weekly shipments against 48-hour SLA and zero-defect standards.
+  \item For LCS, supported migration of 22,000 employee profiles into Okta and resolved 70 daily access, login, and escalation requests.
+  \item For John Deere, served as frontline infrastructure contact across 3 enterprise environments, documenting issues and coordinating fixes.
 \end{itemize}
 
-\resumeRole{LCS (Contract)}{Des Moines, IA}{Desktop Support Specialist}{Dec. 2022 -- Mar. 2023}
+\resumeCompactRole{Earlier Work}{2014 -- 2022}{Help Desk, Account Management \& IT Support}
 \begin{itemize}
-  \item Supported migration of 22,000 employee profiles into Okta and resolved 70 daily access, login, and escalation requests.
+  \item Provided Wright Service Corp help desk support across user issues, remote troubleshooting, and documentation.
+  \item Supported Edge Realty Group account management and IT workflows across file server access, onboarding, and remote support.
 \end{itemize}
-
-\resumeRole{John Deere (Contract)}{Des Moines, IA}{Traveling Infrastructure Engineer}{Jun. 2022 -- Dec. 2022}
-\begin{itemize}
-  \item Served as frontline infrastructure contact across 3 enterprise environments, documenting issues and coordinating fixes.
-\end{itemize}
-
-\resumeCompactRole{Earlier IT Support}{2014 -- 2022}{Help Desk, Account Management \& IT Support}
-Wright Service Corp help desk support; Edge Realty Group account management and IT support across remote desktop, file server, and onboarding workflows.
 
 \section*{Projects}
-\textbf{Marchetti's Apartment} \hfill \href{https://frankstop.github.io/marchettis-apartment/}{\textbf{frankstop.github.io/marchettis-apartment}}
+\resumeTitle{GalaFreshBaldwin} \hfill \href{https://frankiejvaldez.com/projects/galafreshbaldwin/}{\resumeTitle{frankiejvaldez.com/projects/galafreshbaldwin}}
 \begin{itemize}
-  \item Built a deployed static apartment-search app using client-side JavaScript, Leaflet maps, Chart.js visuals, local modules, and GitHub Pages hosting.
+  \item Built a daily Python/Playwright pipeline for 9,606 listings and 775 promotions, with integrity gates and searchable price history.
 \end{itemize}
 
-\textbf{GoodJob} \hfill \href{https://frankstop.github.io/GoodJob/}{\textbf{frankstop.github.io/GoodJob}}
+\resumeTitle{KingKullenResearch} \hfill \href{https://frankiejvaldez.com/projects/kingkullenresearch/}{\resumeTitle{frankiejvaldez.com/projects/kingkullenresearch}}
 \begin{itemize}
-  \item Built a JavaScript/GitHub Pages dashboard backed by a scheduled Node.js pipeline that normalizes 3,007 jobs from 12 employer-direct Greenhouse, Lever, and Ashby feeds, with filters, job aging, saved jobs, and schema-tested refreshes.
+  \item Built a weekly pipeline for 20,000+ catalog records and 16,000+ UPCs, publishing longitudinal price and assortment reports.
 \end{itemize}
 
-\textbf{KingKullenResearch} \hfill \href{https://frankstop.github.io/KingKullenResearch/}{\textbf{frankstop.github.io/KingKullenResearch}}
+\resumeTitle{StopShopResearch} \hfill \href{https://frankiejvaldez.com/projects/stopshopresearch/}{\resumeTitle{frankiejvaldez.com/projects/stopshopresearch}}
 \begin{itemize}
-  \item Built a weekly Python pricing pipeline from Freshop API data, adding price tracking, reconciliation checks, predictive modeling, and GitHub Pages reporting.
+  \item Built a validated weekly Stop \& Shop catalog pipeline publishing price, promotion, assortment, and anomaly reports.
+\end{itemize}
+
+\resumeTitle{GoodJob} \hfill \href{https://frankiejvaldez.com/projects/goodjob/}{\resumeTitle{frankiejvaldez.com/projects/goodjob}}
+\begin{itemize}
+  \item Built a scheduled Node.js pipeline normalizing Greenhouse, Lever, and Ashby feeds into a searchable job dashboard.
 \end{itemize}
 
 \section*{Education}
-\textbf{SUNY Old Westbury} \hfill \textbf{Jan. 2024 -- Aug. 2025}\\
-B.S. Computer \& Information Sciences, GPA 3.85; Dean's List; Coding Club Re-Founder\\
-\textbf{Nassau Community College} \hfill \textbf{2015 -- 2017}\\
-Associate of Science (A.S.)\\
-\textbf{Certifications:} Google UX Design Certificate; Google IT Support Certificate
+\resumeTitle{SUNY Old Westbury} \hfill \resumeTitle{Jan. 2024 -- Aug. 2025}\\[1.5pt]
+B.S. Computer \& Information Science, GPA 3.85; Dean's List; Coding Club Re-Founder\\[3pt]
+\resumeTitle{Nassau Community College} \hfill \resumeTitle{2015 -- 2017}\\[1.5pt]
+Associate of Science (A.S.)\\[3pt]
+\resumeTitle{Certifications:} Google UX Design Certificate; Google IT Support Certificate
 
 \end{document}
